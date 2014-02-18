@@ -1,0 +1,19 @@
+Metadata-Version: 1.0
+Name: cardutils
+Version: 0.1
+Summary: Utilities for (credit) card numbers.
+Home-page: http://elsie.org.uk/bits
+Author: Henry Bucklow
+Author-email: hb@elsie.org.uk
+License: UNKNOWN
+Download-URL: http://elsie.org.uk/files/cardutils-0.1.zip
+Description: 
+        Contains functions for checking, analysing and
+        generating random card numbers. The random card
+        numbers appear valid at first glance (they have
+        valid issuers and checksum digits).
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: GNU General Public License (GPL)
+Classifier: Programming Language :: Python
