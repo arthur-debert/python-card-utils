@@ -36,7 +36,7 @@ some of the many cases that this code doesn't handle well:
     ((cat|dog)\2)*
 
         I don't know what the semantics of this case are supposed to be;
-        playing with sre.match() didn't help much.
+        playing with re.match() didn't help much.
 
     case insensitivity, regular expression flags, etc.
 
@@ -49,7 +49,7 @@ to generate any strings for some legitimate expressions.
 
 import random,string,exceptions
 from sre_constants import *
-import sre_parse,sre
+import sre_parse,re
 
 STAR_REPEAT_CHANCE = .7
 MAX_RE_ATTEMPTS = 10
@@ -165,7 +165,7 @@ def random_from_pattern(pattern):
     for i in range(MAX_RE_ATTEMPTS):
         try:
             r = random_from_seq(seq,None)[0]
-            if sre.match(pattern, r):
+            if re.match(pattern, r):
                 return r
         except FailedToGenerate:
             pass
@@ -179,7 +179,7 @@ if __name__ == '__main__':
         for i in range(5):
             try:
                 r = random_from_pattern(p)
-                assert sre.match(p,r)
+                assert re.match(p,r)
             except FailedToGenerate:
                 r = 'failed!'
             print '    ',r
